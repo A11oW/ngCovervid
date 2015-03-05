@@ -22,8 +22,11 @@ How do I use it?
     ```
     bower install ng-covervid
     ```
-
-2. It is important to note that the video you target will use its parent element to scale. With that in mind, we will create some simple markup and add some base styling to size the videos' parent/wrapper element. The directive must be declared as either an attribute of a video element or as an element itself.
+2. Add `ngCovervid` as a dependency of your Angular application.
+    ```javascript
+    angular.module('app',['ngCovervid']);
+    ```
+3. It is important to note that the video you target will use its parent element to scale. With that in mind, we will create some simple markup and add some base styling to size the videos' parent/wrapper element. The directive must be declared as either an attribute of a video element or as an element itself.
     
     ATTRIBUTE
     ```html
@@ -55,7 +58,7 @@ How do I use it?
     }
     ```
 
-3. You have the option to include the native height and width of the video as attributes of the element or let the directive determine them for you. Note that including these values as attributes will ensure there is no lag in the initial sizing of the video as the directive needs to wait for the video's metadata to load before it can resize the video.
+4. You have the option to include the native height and width of the video as attributes of the element or let the directive determine them for you. Note that including these values as attributes will ensure there is no lag in the initial sizing of the video as the directive needs to wait for the video's metadata to load before it can resize the video.
     ```html
     <covervid class="covervid-video" autoplay loop poster="img/video-fallback.png"
         height="720" width="1280">
