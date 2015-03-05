@@ -33,8 +33,7 @@ How do I use it?
     ATTRIBUTE
     ```html
     <div class="covervid-wrapper">
-        <video covervid class="covervid-video" autoplay loop
-            poster="img/video-fallback.png">
+        <video covervid class="covervid-video" autoplay loop poster="img/video-fallback.png">
             <source src="videos/clouds.webm" type="video/webm">
             <source src="videos/clouds.mp4" type="video/mp4">
         </video>
