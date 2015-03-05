@@ -22,10 +22,12 @@ How do I use it?
     ```
     bower install ng-covervid
     ```
+    
 2. Add `ngCovervid` as a dependency of your Angular application.
     ```javascript
     angular.module('app',['ngCovervid']);
     ```
+    
 3. It is important to note that the video you target will use its parent element to scale. With that in mind, we will create some simple markup and add some base styling to size the videos' parent/wrapper element. The directive must be declared as either an attribute of a video element or as an element itself.
     
     ATTRIBUTE
