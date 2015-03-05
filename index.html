@@ -42,6 +42,7 @@
 			<h2>How do I use it?</h2>
 			<ol>
 				<li>First pull the project down from <a href="http://github.com/jfeigel/ngCovervid">GitHub</a> or install it through <a href="http://www.bower.io">Bower</a> and link <code>ngCovervid.min.js</code> into your site.<pre>bower install ng-covervid</pre></li>
+				<li>Add ngCovervid as a dependency of your Angular application.<pre>angular.module(<span class="nt">'app'</span>,[<span class="nt">'ngCovervid'</span>]);</pre></li>
 				<li>It is important to note that the video you target will use its parent element to scale. With that in mind, we will create some simple markup and add some base styling to size the videos' parent/wrapper element. The directive must be declared as either an attribute of a video element or as an element itself.<br/><br/><div>ATTRIBUTE</div><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"covervid-wrapper"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;video</span> <span class="na">covervid</span> <span class="na">class=</span><span class="s">"covervid-video"</span> <span class="na">autoplay</span> <span class="na">loop</span>
         <span class="na">poster=</span><span class="s">"img/video-fallback.png"</span><span class="nt">&gt;</span>
