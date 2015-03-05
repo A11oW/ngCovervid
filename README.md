@@ -2,9 +2,9 @@ Special Thanks
 ------------------
 A special thanks and shoutout to <a href="http://github.com/stefanerickson">Stefan Erickson</a> for creating the original <a href="http://github.com/stefanerickson/covervid">CoverVid</a>.
 
-CoverVid
+NgCoverVid
 ========
-At the core of CoverVid, is the idea of this little CSS snippet being possible...
+At the core of NgCoverVid, is the idea of this little CSS snippet being possible...
 ```css
 .selector {
     background-video: url('../foo/bar.mp4 || ../foo/bar.webm');
