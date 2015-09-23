@@ -16,6 +16,8 @@ angular.module('ngCovervid',[])
 			template: '<video ng-transclude></video>',
 			transclude: true,
 			link: function(scope, elem, attrs) {
+				var elemParent = elem.parent();
+
 				function debounce(fn, delay) {
 					var timer = null;
 
@@ -43,8 +45,8 @@ angular.module('ngCovervid',[])
 
 				// call sizeVideo on resize
 				angular.element($window).bind('resize', function() {
-	                debounce(sizeVideo(), 50);
-	            });
+					debounce(sizeVideo(), 50);
+				});
 
 				// Set necessary styles to position video "center center"
 				elem.css('position','absolute');
@@ -55,13 +57,13 @@ angular.module('ngCovervid',[])
 				elem.css('transform','translate(-50%, -50%)');
 
 				// Set overflow hidden on parent element
-				elem.parent().css('overflow','hidden');
+				elemParent.css('overflow','hidden');
 
 				// Define the attached selector
 				function sizeVideo() {
 					// Get parent element height and width
-					var parentHeight = elem.parent()[0].offsetHeight;
-					var parentWidth = elem.parent()[0].offsetWidth;
+					var parentHeight = elemParent[0].offsetHeight;
+					var parentWidth = elemParent[0].offsetWidth;
 
 					// Get native video height and width
 					var nativeHeight = height;
